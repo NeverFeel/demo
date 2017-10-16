@@ -1,0 +1,4 @@
+#禁用spring banner
+spring: 
+  main: 
+    banner-mode: "off"
