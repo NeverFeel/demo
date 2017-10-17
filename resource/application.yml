@@ -1,4 +1,13 @@
 #禁用spring banner
-spring: 
-  main: 
+spring:  
+  main:  
     banner-mode: "off"
+    
+my: 
+  version: ${random.value}
+  number: ${random.int}
+  bigNumber: ${random.long}
+  less: ${random.int(10)}
+  range: ${random.int[1024,65536]}
+
+  
