@@ -1,13 +1,17 @@
+#配置文件
+spring：
+  profiles：
+    active： dev
+    
 #禁用spring banner
 spring:  
   main:  
     banner-mode: "off"
-    
+
+#自定义数据配置    
 my: 
   version: ${random.value}
   number: ${random.int}
   bigNumber: ${random.long}
   less: ${random.int(10)}
   range: ${random.int[1024,65536]}
-
-  

@@ -15,6 +15,7 @@ public class DataConfiguration implements ApplicationRunner {
 	 * beans需要以特定的顺序调用，你可以实现org.springframework.core.Ordered接口
 	 * 或使用org.springframework.core.annotation.Order注解。
 	 */
+	@Override
 	public void run(ApplicationArguments arg) throws Exception {
 		while(flag){
 			System.out.println("商品加载中...");

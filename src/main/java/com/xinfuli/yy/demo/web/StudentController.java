@@ -9,6 +9,15 @@ import com.xinfuli.yy.demo.configuration.NumberConfiguration;
 import com.xinfuli.yy.demo.domain.Student;
 import com.xinfuli.yy.demo.service.StudentService;
 
+
+/**
+ * 
+ * @ClassName: StudentController 
+ * @Description: TODO
+ * @author ilidan_Y
+ * @date 2017年10月18日 上午10:01:41 
+ *
+ */
 @RestController
 public class StudentController {
 

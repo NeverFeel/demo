@@ -8,6 +8,7 @@ import com.xinfuli.yy.demo.service.StudentService;
 @Service
 public class StudentServiceImpl implements StudentService {
 
+	@Override
 	public Student findStudentById(String id) {
 		Student student = new Student();
 		student.setUsername("张三");
