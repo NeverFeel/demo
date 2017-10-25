@@ -27,6 +27,11 @@ public class StudentController {
 	@Autowired
 	private NumberConfiguration numberConfiguration;
 	
+	@RequestMapping(value="/insertStudent",method=RequestMethod.GET)
+	public void insertStudent(){
+		studentService.insert();
+	}
+	
 	@RequestMapping(value="/getStudentById",method=RequestMethod.GET)
 	public Student getStudentById(){
 		return studentService.findStudentById("");

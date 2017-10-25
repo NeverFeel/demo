@@ -14,5 +14,7 @@ public interface StudentService {
 	 * @throws
 	 */
 	Student findStudentById(String id);
+	
+	void insert();
 
 }

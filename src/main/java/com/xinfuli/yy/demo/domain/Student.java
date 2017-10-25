@@ -7,10 +7,19 @@ package com.xinfuli.yy.demo.domain;
  */
 public class Student {
 
+	private String id;
 	private String username;
 	private String score;
 	private String age;
 	private String address;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getUsername() {
 		return username;
