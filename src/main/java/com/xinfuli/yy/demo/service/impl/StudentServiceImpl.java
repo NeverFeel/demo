@@ -14,8 +14,8 @@ import com.xinfuli.yy.demo.service.StudentService;
 
 @Service
 public class StudentServiceImpl implements StudentService {
-	private static final String[] LASTNAME = { "赵", " 钱", "孙", " 李", "周", " 吴",
-			"郑", "王", "冯", "陈", "褚", "卫", "蒋", "沈", "韩", " 杨" };
+	private static final String[] LASTNAME = { "赵", "钱", "孙", "李", "周", "吴",
+			"郑", "王", "冯", "陈", "褚", "卫", "蒋", "沈", "韩", "杨" };
 	private static final String[] FIRSTNAME = { "忆柏", "访琴", "秋枫", "含蓝", "映岚",
 			"白萍", "亦双", "若柳", "诗蓝", "安易", "痴海", "又灵", "水琴", "凡真", "怀云", "飞蕾",
 			"新巧", "觅梅" };
@@ -46,7 +46,7 @@ public class StudentServiceImpl implements StudentService {
 		student.setScore(random.nextInt(99)+1+"");
 		student.setAddress(ADDRESS[random.nextInt(5)]);
 		studentMapper.insert(student);
-		return new CommonResult(null);
+		return new CommonResult(student);
 	}
 
 }
