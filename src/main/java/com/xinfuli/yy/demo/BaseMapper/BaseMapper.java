@@ -1,7 +1,5 @@
 package com.xinfuli.yy.demo.BaseMapper;
 
-import org.apache.ibatis.annotations.Param;
-
 /**
  * 
  * @ClassName: BaseMapper 
