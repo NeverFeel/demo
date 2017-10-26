@@ -22,18 +22,18 @@
 		INSERT INTO student
 		(id,username,score,age,address)
 		VALUES
-		(#{student.id},#{student.username},#{student.score},#{student.age},#{student.address})
+		(#{id},#{username},#{score},#{age},#{address})
 	</insert>
 
 	<update id="update" parameterType="com.xinfuli.yy.demo.domain.Student">
 		UPDATE student
 		<set>
-			<if test="username != null"> username = #{student.username}, </if>
-			<if test="score != null"> score = #{student.score}, </if>
-			<if test="age != null"> age = #{student.age}, </if>
-			<if test="address != null"> address = #{student.address}</if>
+			<if test="username != null"> username = #{username}, </if>
+			<if test="score != null"> score = #{score}, </if>
+			<if test="age != null"> age = #{age}, </if>
+			<if test="address != null"> address = #{address}</if>
 		</set>
-		WHERE id = #{student.id}
+		WHERE id = #{id}
 	</update>
 
 </mapper>

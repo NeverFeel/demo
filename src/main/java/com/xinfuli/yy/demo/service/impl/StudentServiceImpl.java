@@ -19,10 +19,10 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public Student findStudentById(String id) {
 		Student student = new Student();
-		student.setUsername("张三");
-		student.setAge("20");
-		student.setScore("98");
-		student.setAddress("长寿路陕西北路财富大厦");
+		student.setUsername("李四");
+		student.setAge("21");
+		student.setScore("78");
+		student.setAddress("浦东新区塘桥");
 		return student;
 	}
 
@@ -32,10 +32,10 @@ public class StudentServiceImpl implements StudentService {
 		Student student = new Student();
 		String id = UUID.randomUUID().toString().replace("-", "");
 		student.setId(id);
-		student.setUsername("张三");
-		student.setAge("20");
-		student.setScore("98");
-		student.setAddress("长寿路陕西北路财富大厦");
+		student.setUsername("李四");
+		student.setAge("21");
+		student.setScore("78");
+		student.setAddress("浦东新区塘桥");
 		studentMapper.insert(student);
 	}
 
