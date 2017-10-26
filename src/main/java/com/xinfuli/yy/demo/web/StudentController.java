@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.xinfuli.yy.demo.common.CommonResult;
 import com.xinfuli.yy.demo.configuration.NumberConfiguration;
 import com.xinfuli.yy.demo.domain.Student;
 import com.xinfuli.yy.demo.service.StudentService;
@@ -28,17 +29,17 @@ public class StudentController {
 	private NumberConfiguration numberConfiguration;
 	
 	@RequestMapping(value="/insertStudent",method=RequestMethod.GET)
-	public void insertStudent(){
-		studentService.insert();
+	public CommonResult insertStudent(){
+		return studentService.insert();
 	}
 	
 	@RequestMapping(value="/getStudentById",method=RequestMethod.GET)
-	public Student getStudentById(){
+	public CommonResult getStudentById(){
 		return studentService.findStudentById("");
 	}
 	
 	@RequestMapping(value="/getRandomNumber",method=RequestMethod.GET)
-	public NumberConfiguration getRandomNumber(){
-		return numberConfiguration;
+	public CommonResult getRandomNumber(){
+		return new CommonResult(numberConfiguration);
 	}
 }

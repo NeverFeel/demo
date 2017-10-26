@@ -1,6 +1,6 @@
 package com.xinfuli.yy.demo.service;
 
-import com.xinfuli.yy.demo.domain.Student;
+import com.xinfuli.yy.demo.common.CommonResult;
 
 public interface StudentService {
 	
@@ -13,8 +13,8 @@ public interface StudentService {
 	 * @return Student    返回类型 
 	 * @throws
 	 */
-	Student findStudentById(String id);
+	CommonResult findStudentById(String id);
 	
-	void insert();
+	CommonResult insert();
 
 }

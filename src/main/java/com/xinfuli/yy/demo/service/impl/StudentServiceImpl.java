@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.xinfuli.yy.demo.common.CommonResult;
 import com.xinfuli.yy.demo.domain.Student;
 import com.xinfuli.yy.demo.mapper.StudentMapper;
 import com.xinfuli.yy.demo.service.StudentService;
@@ -24,18 +25,18 @@ public class StudentServiceImpl implements StudentService {
 	private StudentMapper studentMapper;
 
 	@Override
-	public Student findStudentById(String id) {
+	public CommonResult findStudentById(String id) {
 		Student student = new Student();
 		student.setUsername("王五");
 		student.setAge(21);
 		student.setScore("78");
 		student.setAddress("浦东新区塘桥");
-		return student;
+		return new CommonResult(student);
 	}
 
 	@Override
 	@Transactional
-	public void insert() {
+	public CommonResult insert() {
 		Student student = new Student();
 		Random random = new Random();
 		String id = UUID.randomUUID().toString().replace("-", "");
@@ -45,6 +46,7 @@ public class StudentServiceImpl implements StudentService {
 		student.setScore(random.nextInt(99)+1+"");
 		student.setAddress(ADDRESS[random.nextInt(5)]);
 		studentMapper.insert(student);
+		return new CommonResult(null);
 	}
 
 }
