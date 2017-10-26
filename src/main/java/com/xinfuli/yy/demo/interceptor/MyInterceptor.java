@@ -25,6 +25,7 @@ public class MyInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
 			Object object) throws Exception {
 		System.out.println("-------------------->preHandle");
+		//response.sendRedirect("");//执行跳转
 		//return false;//不执行后续操作
 		return true;
 	}
