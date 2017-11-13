@@ -3,21 +3,22 @@ package com.xinfuli.yy.demo.configuration;
 import java.io.Serializable;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CachingConfigurerSupport;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.SerializationException;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-import org.springframework.stereotype.Component;
 import org.springframework.util.SerializationUtils;
 
 import com.xinfuli.yy.demo.common.RedisProperties;
 
-@Component
-public class RedisConfiguration extends CachingConfigurerSupport {
+@Configuration
+@EnableConfigurationProperties(RedisProperties.class)
+public class RedisConfiguration {
 
 	@Autowired
 	private RedisProperties redisProperties;
