@@ -1,4 +1,4 @@
-package com.xinfuli.yy.demo.BaseMapper;
+package com.xinfuli.yy.demo.baseMapper;
 
 /**
  * 
